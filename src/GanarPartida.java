@@ -1,10 +1,7 @@
 /**
  * Clase ganar partida
  *
- * Comprobacion si hay linea de 4
- *
- * @author JaviCg
- * @version 1.0
+ * Comprobacion si hay linea de 4 
  */
 public class GanarPartida {
 
