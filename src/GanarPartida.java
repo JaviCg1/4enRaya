@@ -1,4 +1,11 @@
-
+/**
+ * Clase ganar partida
+ *
+ * Comprobacion si hay linea de 4
+ *
+ * @author JaviCg
+ * @version 1.0
+ */
 public class GanarPartida {
 
 	public GanarPartida() {
