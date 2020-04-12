@@ -18,6 +18,7 @@ public class GanarPartida {
 								
 							}else {
 								break;
+								
 							}if (j2==3) {
 								Partida.gaan=true;
 								Partida.ganador=ch;

@@ -47,13 +47,13 @@ public class Partida {
 		
 			if (Primero.equals("Maquina")){
 				while(!tiradaMaquina());
-				if (gaan==false) {
+				if (!gaan) {
 					while(!tiradaReal());
 				}
 				
 			}else {
 				while(!tiradaReal());
-				if (gaan==false) {
+				if (!gaan) {
 					while(!tiradaMaquina());
 				}
 				
@@ -86,16 +86,14 @@ public class Partida {
 	}
 	
 	void meterFicha(int posicion, char ficha) {
-		if (gaan) {
+		if (!gaan) {
 		
-		
-			
-		}else {
 			System.out.println("Metiendo fichaa");
 			tabla[contTabla[posicion-1]][posicion-1]=ficha;	
 			contTabla[posicion-1]++;
 			imprimirTabla();
 			GanarPartida.ganar(ficha);
+			
 		}
 		
 	}

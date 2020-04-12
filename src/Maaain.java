@@ -15,7 +15,7 @@ public class Maaain {
 		Partida uno = new Partida();
 		uno.empiezaPartida();
 		
-		while (uno.repetirTurno()==false&&uno.gaan==false) {
+		while (!uno.repetirTurno()&&!uno.gaan) {
 			uno.turnos();
 			
 		}
