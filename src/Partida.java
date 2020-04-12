@@ -18,7 +18,7 @@ public class Partida {
 	 int contTiradas;
 	 static boolean gaan;
 	 static char ganador;
-	
+	 static int proximaTirada=-1;
 	Scanner in;
 	public Partida() {
 		 
@@ -64,7 +64,15 @@ public class Partida {
 	
 	
 	boolean tiradaMaquina() {
-			int valor=(int) (Math.random()* 6)+1;
+		int valor;
+		if (proximaTirada == -1) {
+			 valor=(int) (Math.random()* 6)+1;
+		}else {
+			 valor=proximaTirada+1;
+			 proximaTirada=-1;
+			 
+		}
+			
 			return trycatch(valor, 'O');	
 	}			
 	
@@ -92,6 +100,7 @@ public class Partida {
 			tabla[contTabla[posicion-1]][posicion-1]=ficha;	
 			contTabla[posicion-1]++;
 			imprimirTabla();
+			
 			GanarPartida.ganar(ficha);
 			
 		}

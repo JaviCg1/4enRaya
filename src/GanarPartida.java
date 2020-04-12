@@ -8,7 +8,9 @@ public class GanarPartida {
 	public GanarPartida() {
 		// TODO Auto-generated constructor stub
 	}
+	
 	static boolean ganar(char ch) {
+		
 		for (int i = 0; i < 6; i++) {
 			for (int j = 0; j < 7; j++) {
 				if (Partida.tabla[i][j]==ch) {
@@ -17,6 +19,9 @@ public class GanarPartida {
 							if (Partida.tabla[i+j2][j]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i+j2][j]=='-') {	
+									Partida.proximaTirada=j;
+								}
 								break;
 								
 							}if (j2==3) {
@@ -31,6 +36,9 @@ public class GanarPartida {
 							if (Partida.tabla[i-j2][j]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i-j2][j]=='-') {	
+									Partida.proximaTirada=j;
+								}
 								break;
 							}
 							if (j2==3) {
@@ -44,6 +52,9 @@ public class GanarPartida {
 							if (Partida.tabla[i][j+j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i][j+j2]=='-') {	
+									Partida.proximaTirada=j+j2;
+								}
 								break;
 							}
 							if (j2==3) {
@@ -57,6 +68,9 @@ public class GanarPartida {
 							if (Partida.tabla[i][j-j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i][j-j2]=='-') {	
+									Partida.proximaTirada=j-j2;
+								}
 								break;
 							}
 							if (j2==3) {
@@ -72,6 +86,9 @@ public class GanarPartida {
 							if (Partida.tabla[i+j2][j+j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i+j2][j+j2]=='-') {	
+									Partida.proximaTirada=j+j2;
+								}
 								break;
 							}if (j2==3) {
 								Partida.gaan=true;
@@ -85,6 +102,9 @@ public class GanarPartida {
 							if (Partida.tabla[i+j2][j-j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i+j2][j-j2]=='-') {	
+									Partida.proximaTirada=j-j2-1;
+								}
 								break;
 							}if (j2==3) {
 								Partida.gaan=true;
@@ -98,6 +118,9 @@ public class GanarPartida {
 							if (Partida.tabla[i-j2][j-j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i-j2][j-j2]=='-') {	
+									Partida.proximaTirada=j-j2-1;
+								}
 								break;
 							}if (j2==3) {
 								Partida.gaan=true;
@@ -111,6 +134,9 @@ public class GanarPartida {
 							if (Partida.tabla[i-j2][j+j2]==ch) {
 								
 							}else {
+								if (j2==3&&Partida.tabla[i-j2][j+j2]=='-') {	
+									Partida.proximaTirada=j+j2-1;
+								}
 								break;
 							}if (j2==3) {
 								Partida.gaan=true;
