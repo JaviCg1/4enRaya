@@ -39,7 +39,17 @@ public class Partida {
 		contTiradas=0;	
 	}
 	boolean repetirTurno(){
-		
+		int cont=0;
+		for (int i : contTabla) {
+			if (i!=6) {
+				break;
+			}else  {
+				cont++;
+			}
+		}
+		if (cont==7) {
+			return true;
+		}
 		return false;
 		
 	}
