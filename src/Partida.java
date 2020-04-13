@@ -110,8 +110,9 @@ public class Partida {
 			System.out.println("Metiendo fichaa");
 			tabla[contTabla[posicion-1]][posicion-1]=ficha;	
 			contTabla[posicion-1]++;
-			GanarPartida.ganar(ficha);
+			System.out.println();
 			imprimirTabla();
+			GanarPartida.ganar(ficha);
 						
 		}
 		
