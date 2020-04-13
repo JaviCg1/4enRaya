@@ -103,7 +103,7 @@ public class GanarPartida {
 								
 							}else {
 								if (j2==3&&Partida.tabla[i+j2][j-j2]=='-') {	
-									Partida.proximaTirada=j-j2-1;
+									Partida.proximaTirada=j-j2;
 								}
 								break;
 							}if (j2==3) {
@@ -119,7 +119,7 @@ public class GanarPartida {
 								
 							}else {
 								if (j2==3&&Partida.tabla[i-j2][j-j2]=='-') {	
-									Partida.proximaTirada=j-j2-1;
+									Partida.proximaTirada=j-j2;
 								}
 								break;
 							}if (j2==3) {
@@ -135,7 +135,7 @@ public class GanarPartida {
 								
 							}else {
 								if (j2==3&&Partida.tabla[i-j2][j+j2]=='-') {	
-									Partida.proximaTirada=j+j2-1;
+									Partida.proximaTirada=j+j2;
 								}
 								break;
 							}if (j2==3) {

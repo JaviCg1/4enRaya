@@ -65,6 +65,7 @@ public class Partida {
 	
 	boolean tiradaMaquina() {
 		int valor;
+		GanarPartida.ganar('O');
 		if (proximaTirada == -1) {
 			 valor=(int) (Math.random()* 6)+1;
 		}else {
@@ -99,10 +100,9 @@ public class Partida {
 			System.out.println("Metiendo fichaa");
 			tabla[contTabla[posicion-1]][posicion-1]=ficha;	
 			contTabla[posicion-1]++;
-			imprimirTabla();
-			
 			GanarPartida.ganar(ficha);
-			
+			imprimirTabla();
+						
 		}
 		
 	}
