@@ -12,14 +12,15 @@ public class Maaain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Partida uno = new Partida();
-		uno.empiezaPartida();
+		Partida start = new Partida();
+		Datos info = new Datos();
+		start.empiezaPartida();
 		
-		while (!uno.repetirTurno()&&!uno.gaan) {
-			uno.turnos();
+		while (!start.repetirTurno()&&!info.isConfirGanador()) {
+			start.turnos();
 			
 		}
-		uno.terminarPartida();
+		start.terminarPartida();
 		
 	}
 
